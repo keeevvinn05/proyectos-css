@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+padding: 0;
+box-sizing: borderbox;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 20% 1fr 10% ;
+  grid-template-areas: 
+  "zheader" 
+  "znav" 
+  "zmain" 
+  "zfooter";
+}
+
+
+header {
+  grid-area: zheader;
+  background-color: #73cf51;
+  color: bisque;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  text-align: center;
+}
+
+nav {
+  grid-area: znav;
+  background-color: #5bcfcb;
+  color: bisque;
+}
+
+main {
+  grid-area: zmain;
+  background-color: #956de7;
+  color: bisque;
+}
+
+footer {
+  grid-area: zfooter;
+  background-color: #9C27B0;
+  color: bisque;
+}
