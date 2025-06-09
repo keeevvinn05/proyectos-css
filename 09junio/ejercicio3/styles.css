@@ -1,0 +1,36 @@
+body{
+height: 100vh; 
+display: grid;
+grid-template-rows: 25% 1fr;
+grid-row: 50px 1fr 50px;
+grid-template-areas: 
+"zheader zheader"
+" znav zmain"
+"zfooter zfooter";
+}
+
+
+header{
+grid-area: zheader;
+background-color: rgb(102, 180, 164);
+color: bisque;
+}
+
+nav{
+grid-area: znav;
+background-color: rgb(103, 190, 98);
+color: bisque;
+}
+
+main{
+grid-area: zmain;
+background-color: rgba(64, 143, 233, 0.67);
+color: bisque;
+}
+
+footer{
+grid-area: zfooter;
+background-color: rgb(190, 104, 225);
+color: bisque;
+
+}
