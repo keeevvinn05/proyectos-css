@@ -1,0 +1,67 @@
+
+*{
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+body{
+height: 100vh;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 10% 15% 1fr 10%;
+grid-template-areas:
+"zh"
+"zn"
+"zm"
+"zf"
+;
+}
+
+
+header{
+grid-area: zh;
+background-color: mediumaquamarine;
+color: rgb(234, 121, 157);
+font-size: 20px; 
+display: flex;
+justify-content: space-between;
+text-align: center;
+}
+
+
+#logo{
+display: flex;
+align-items: center;
+}
+
+#titulo{
+margin-right: 50px;
+display:flex;
+align-items: center;
+}
+
+header > div > img{
+max-height: 80px;
+padding: 10px;
+margin-left: 10px;
+}
+nav{
+grid-area: zn;
+background-color: rgba(158, 186, 106, 0.585);
+color: rgb(234, 121, 157);
+display: flex;
+align-content: center;
+justify-content: space-between;
+padding: 10px;
+}
+
+nav > div{
+
+  font-size: 20px;
+}
+
+nav > div:hover{
+  color: crimson;
+}
