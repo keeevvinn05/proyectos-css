@@ -10,7 +10,7 @@ body{
 height: 100vh;
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: 10% 15% 1fr 10%;
+grid-template-rows: 100px 50px 1fr 60px;
 grid-template-areas:
 "zh"
 "zn"
@@ -20,15 +20,16 @@ grid-template-areas:
 }
 
 
-header{
-grid-area: zh;
-background-color: mediumaquamarine;
-color: rgb(234, 121, 157);
-font-size: 20px; 
-display: flex;
-justify-content: space-between;
-text-align: center;
+header {
+  grid-area: zh;
+  background-color: mediumaquamarine;
+  color: rgb(234, 121, 157);
+  font-size: 40px; 
+  display: flex;
+  justify-content: space-between; /* Cambiado */
+  text-align: center;     /* Centra verticalmente también */
 }
+
 
 
 #logo{
@@ -37,22 +38,23 @@ align-items: center;
 }
 
 #titulo{
-margin-right: 50px;
-display:flex;
-align-items: center;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
 }
 
 header > div > img{
 max-height: 80px;
 padding: 10px;
 margin-left: 10px;
+position: relative;
 }
 nav{
 grid-area: zn;
-background-color: rgba(158, 186, 106, 0.585);
+background-color: rgba(229, 229, 102, 0.585);
 color: rgb(234, 121, 157);
 display: flex;
-align-content: center;
+align-items: center;
 justify-content: space-between;
 padding: 10px;
 }
@@ -63,5 +65,112 @@ nav > div{
 }
 
 nav > div:hover{
-  color: crimson;
+  color: rgb(212, 218, 104);
+}
+
+main{
+grid-area: zm;
+background-color: rgb(243, 188, 236);
+color: rgb(234, 121, 157) ;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 16px;
+}
+
+main > .texto{
+width: 98%;
+height: 200px;
+background-color: aquamarine;
+border: 1px solid rgb(255, 254, 254);
+max-width: 350px;
+box-shadow: 5px 5px 5px rgb(235, 0, 0);
+display: flex;
+align-items: center;
+justify-content: center;
+color: rgb(234, 121, 157);
+font-size: 20px;
+text-shadow: 1px 1px 2px rgb(234, 121, 157) ;
+}
+
+aside{
+grid-area: za;
+display: none;
+background-color: aquamarine;
+flex-wrap: wrap;
+justify-content: center;
+align-content: space-around;
+gap: 16px;
+padding: 20px;
+}
+
+
+aside > .anuncio{
+width: 300px;
+height: 30%;
+margin-bottom: 3px;
+background-color: aquamarine;
+color: rgb(234, 121, 157) ;
+border: 1px solid white;
+box-shadow: 5px red;
+display: flex;
+justify-content: center;
+font-size: 30px;
+text-shadow: 1px 1px 2px rgb(234, 121, 157);
+}
+
+
+footer{
+grid-area:zf ;
+background-color: aquamarine;
+color: rgb(234, 121, 157) ;
+font-size: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
+
+
+@media screen and(min-width:600px){
+  main{
+    padding: 25px;
+    gap: 30px;
+  }
+main > .texto{
+  width: 48%;
+}
+
+}
+@media screen and(min-width:1000px){
+main{
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+}
+main > .texto{
+width: 30%;
+height: 300px;
+}
+}
+body{
+grid-template-columns: 1fr 20%;
+grid-template-rows: 40px 40px 1fr 50px;
+grid-template-areas: 
+"zh zh"
+"zn zn"
+"zm za"
+"zf zf";
+}
+header > div > img{
+max-height: 30px;
+padding: 5px;
+}
+
+
+aside{
+display: flex;
+
 }
