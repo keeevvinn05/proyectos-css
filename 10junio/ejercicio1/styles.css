@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  background: rgb(233, 166, 239);
+}
+
+h1{
+  margin-bottom: 20px;
+}
+
+.caja{
+  width: 300px;
+  padding: 20px;
+  border: 10px solid;
+  margin-bottom: 20px;
+}
+
+.content-box{
+  box-sizing: content-box;
+  border-color: red;
+}
+
+.border-box{
+box-sizing: border-box;
+border-color: chartreuse;
+}
