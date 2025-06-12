@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+     font-family: "Alumni Sans SC", sans-serif;
+}
+
+  /*seccion principal ("hero") de la pagina*/
+.hero{
+  width: 100%;
+  min-height: 100vh; /*altura minima igual a la altura de la ventana*/
+  background-image: url(/assets/images/back-image.png); /*imagen de fondo*/
+  background-position: center; /*centra imagen de foto*/
+  background-size: cover; /*cubre todo el contenedor si es necesario*/
+  padding: 10px 10%; /*espacio interno 10px arriba y abajo y 10% ambos lados*/
+  overflow: hidden; /*oculta cualquier contenido que sobresale*/
+  position: relative; /*sirve como referencia para elementos posicionados dentro*/
+}
+
+
+
+/*barra navegacion*/
+
+
+nav{
+  padding: 10px 0; /*espacio arriba y abajo 10px*/
+  display: flex; /*alinea los elementos*/
+  align-items: center; /*alinea verticalmente*/
+  justify-content: space-between; /*separa los hijos al maximo a ambos extremos*/
+}
+
+/*logo dentro de nav*/
+
+.logo{
+  width: 140px;/*ancho fijo 140px*/
+}
+
+
+/*items de lista de navegacion*/
+
+
+nav ul li {
+  display: inline-block; /*alinea los LI a lo largo*/
+  list-style: none; /*elimina viñetas de la lista*/
+  margin: 10px 15px; /*margen alrededor de cada item*/
+}
+
+
+/*enlaces dentro de los item de navegacion*/
+
+nav ul li a {
+text-decoration: none; /*elimina el subrayado del texto*/
+color: rgb(255, 0, 0);
+font-weight: 400; /*grosor de la letra*/
+}
+
+
+/*boton login*/
+
+
+.logn-btn{
+  text-decoration: none; /*elimina el subrayado del texto*/
+  color: #ff0505;
+  margin-right: 15px;
+  font-weight: 400;
+}
+
+
+/*botones principales (.btn)*/
+
+.btn{
+display: inline-block; /*bloque en linea*/
+text-decoration: none;
+padding: 14px 40px; /*relleno interno vertical de 14px y horizontal de 40*/
+color: rgb(213, 39, 196);
+background-image: linear-gradient(to right, #9e5dd6, #9fe431, #2ab397);
+
+font-size: 14px;
+border-radius: 30px;
+border-top-left-radius: 0;
+transition: all 0.5 ease;
+}
+
+/*contenedor de contenido de .hero*/
+
+.content{
+  margin-top: 10%; /*separacion relativa al contenedor padre*/
+  max-width: 600px; /*ancho max 600px*/
+}
+
+/*Titulo principal dentro de .content*/
+
+.content h1 {
+  font-size: 70px;
+  color: rgb(137, 17, 135);
+}
+
+/*parrafo descriptivo dentro de .content*/
+
+.content p {
+  margin: 10px 0px 30px; /*margen, 10px arriba 0px a los lados y 30px abajo */
+  color: rgb(101, 200, 209);
+  animation-delay: 0.5s; /*retraso de 0.5 antes de iniciar la animacion*/
+}
+
+
+.content .btn{
+  padding: 15px 80px; /*relleno para destacar*/
+  font-size: 16px;
+  animation-delay: 1s; /*retraso de un segundo antes de iniciar animacion*/
+}
+
+
+/*efecto hover - cambia redondeo de esquina al pasar por encima*/
+
+
+.btn:hover {
+  border-top-right-radius: 0;
+  background-image: linear-gradient(45deg,  #ffe5ec);
+
+}
+
+
+/*imagen destacada dentro de .hero*/
+
+.feature-img{
+  width: 530px;
+  position: absolute; /*posicionamiento absoluto respecto a .hero*/
+  bottom: 0; /*pegada al fondo del contenedor*/
+  right: 10; /*separada un 10% del borde derecho*/
+}
+
+/*variante animada de .feature*/
+
+.feature-img.anim{
+animation-delay: 1.5s;
+}
+
+
+/*clases animadas*/
+.anim{
+  opacity: 0; /*comienza invisible*/
+  transform: translateY(30px); /*desplazado 30px hacia abajo*/
+  animation: moveup 0.5s linear forwards; /*ejecuta la animacion moveup*/
+}
+
+
+/*definicion de la animacion*/
+
+@keyframes moveup {
+  100%{
+    opacity: 1; /*termina completamente visible*/
+    transform: translateY(0px); /*termina en su posicion original*/
+  }
+}
