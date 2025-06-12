@@ -1,0 +1,54 @@
+/*Definicion de variables globales de colores*/
+:root{
+lighting-color: aquamarine; /*color principal claro (azul)*/
+color: #66e4a3;
+color: #3681ac;
+color: #d17aed;
+}
+
+
+/*aplica a todos elemntos*/
+
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+font-family: 'poppins';
+}
+
+
+html{
+  font-size: 62.5%;
+}
+
+
+body, html {
+font-weight: 300;
+line-height: 1.4;
+scroll-behavior: smooth;
+color: rgb(214, 177, 239);
+}
+
+
+body{
+  font-size: 1.4rem;
+}
+
+
+
+.cotainer{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+a{
+  text-decoration: none;
+  color: #d17aed;
+}
+
+
+
+
+
+

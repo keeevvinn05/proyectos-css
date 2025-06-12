@@ -8,7 +8,7 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  background-image: url(/ejercicio3/assets/images/fondo.jpg); /* ruta relativa correcta desde styles.css */
+  background-image: url(/assets/images/fondo.jpg); /* ruta relativa correcta desde styles.css */
   background-position: center;
   background-size: cover;
   padding: 10px 10%;
@@ -63,7 +63,7 @@ nav ul li a:hover {
   text-decoration: none;
   padding: 14px 40px;
   color: #fff;
-  background-image: linear-gradient(to right, #9e5dd6, #9fe431, #2ab397);
+  background-image: linear-gradient(to right, #8ae8b9, #9fe431, #2ab397);
   font-size: 14px;
   border-radius: 30px;
   border-top-left-radius: 0;
@@ -83,12 +83,12 @@ nav ul li a:hover {
 
 .content h1 {
   font-size: 70px;
-  color: rgb(0, 140, 72);
+  color: rgb(130, 245, 245);
 }
 
 .content p {
   margin: 10px 0px 30px;
-  color: rgb(195, 101, 209);
+  color: rgb(0, 0, 0);
   animation-delay: 0.5s;
 }
 
